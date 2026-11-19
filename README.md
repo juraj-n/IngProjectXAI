@@ -15,7 +15,10 @@ pip install -r requirements.txt
 ```
 
 ## Dataset
-The **C-NMC 2019 Dataset** (Classification of Normal vs. Malignant Cells in B-ALL White Blood Cancer Microscopic Images), sourced from Kaggle << [C-NMC 2019](https://www.kaggle.com/datasets/shafiullahshafin/c-nmc-2019-dataset?resource=download) >>
+The [**C-NMC 2019 Dataset**](https://www.kaggle.com/datasets/shafiullahshafin/c-nmc-2019-dataset?resource=download) (Classification of Normal vs. Malignant Cells in B-ALL White Blood Cancer Microscopic Images), sourced from Kaggle.
+
+> [!NOTE]
+> The `data/` directory is excluded from version control.
 
 ### Downloading the dataset
 ```bash
