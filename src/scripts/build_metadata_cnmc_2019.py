@@ -24,7 +24,7 @@ df = pd.DataFrame(rows)
 # Split patients
 images = df.groupby("patient_id").size().to_dict()
 label_of = df.groupby("patient_id")["malignant"].first().to_dict()
-random.seed(42)
+random.seed(81)
 split_of = {}
 targets = {"train": 0.70, "val": 0.15, "test": 0.15}
 
@@ -45,5 +45,5 @@ assert (df.groupby("patient_id")["split"].nunique() == 1).all(), "Patient overla
 print("OK: no patient overlap between splits")
 print(pd.crosstab(df["split"], df["malignant"], margins=True))
 
-df.to_csv("data/cnmc_2019_metadata.csv", index=False)
+df.to_csv("data/cnmc_2019_metadata.csv", sep=";", index=False)
 print("Saved", len(df), "rows")
