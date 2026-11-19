@@ -13,3 +13,11 @@ py -3.13.1 -m venv .venv
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
+
+## Dataset
+The **C-NMC 2019 Dataset** (Classification of Normal vs. Malignant Cells in B-ALL White Blood Cancer Microscopic Images), sourced from Kaggle << [C-NMC 2019](https://www.kaggle.com/datasets/shafiullahshafin/c-nmc-2019-dataset?resource=download) >>
+
+### Downloading the dataset
+```bash
+python src/scripts/download_cnmc_dataset.py
+```
