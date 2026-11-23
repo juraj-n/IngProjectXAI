@@ -7,11 +7,23 @@ Reliability of XAI methods in medial imaging (ING Project).
 ## Setup (Windows)
 ``` bash
 git clone https://github.com/juraj-n/IngProjectXAI.git
+
 cd IngProjectXAI
+
 py -3.13.1 -m venv .venv
+
 .venv\Scripts\activate
+
 python -m pip install --upgrade pip
+
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu132
+
 pip install -r requirements.txt
+```
+
+### Check that the GPU is visible (prints "True")
+```bash
+python -c "import torch; print(torch.cuda.is_available())"
 ```
 
 ## Dataset

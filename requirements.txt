@@ -1,2 +1,8 @@
+torch
+torchvision
+scikit-learn
+pillow
 pandas
+numpy
+
 kagglehub
