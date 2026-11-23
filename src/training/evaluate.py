@@ -5,10 +5,10 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from src import config
-from data.dataset import CNMCDataset
-from metrics.metrics import compute_metrics
-from models.resnet import build_model
-from data.transforms import get_eval_transforms
+from src.data.dataset import CNMCDataset
+from src.metrics.metrics import compute_metrics
+from src.models.resnet import build_model
+from src.data.transforms import get_eval_transforms
 
 
 @torch.no_grad()

@@ -7,11 +7,11 @@ import torch.nn as nn
 from torch.utils.data import DataLoader
 
 from src import config
-from data.dataset import CNMCDataset
-from training.evaluate import evaluate_model
-from metrics.metrics import compute_metrics
-from models.resnet import build_model
-from data.transforms import get_eval_transforms, get_train_transforms
+from src.data.dataset import CNMCDataset
+from src.training.evaluate import evaluate_model
+from src.metrics.metrics import compute_metrics
+from src.models.resnet import build_model
+from src.data.transforms import get_eval_transforms, get_train_transforms
 
 
 def set_seed(seed):
