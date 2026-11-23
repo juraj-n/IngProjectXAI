@@ -21,7 +21,7 @@ def set_seed(seed):
     torch.cuda.manual_seed_all(seed)
 
 
-def main():
+def train_main():
     set_seed(config.SEED)
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     print("Using device:", device)
@@ -95,4 +95,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    train_main()

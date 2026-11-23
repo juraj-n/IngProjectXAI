@@ -10,6 +10,6 @@ OUTPUT_DIR = PROJECT_ROOT / "outputs" / "baseline"
 SEED = 81
 BATCH_SIZE = 32             # GPU out of memory -> 16
 LEARNING_RATE = 1e-4
-EPOCHS = 1                  # 10
+EPOCHS = 30
 NUM_WORKERS = 2             # Windows errors -> 0
 IMAGE_SIZE = 224

@@ -26,7 +26,7 @@ def evaluate_model(model, loader, criterion, device):
     return total_loss / len(all_labels), all_labels, all_preds
 
 
-def main():
+def eval_main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     test_ds = CNMCDataset(config.METADATA_CSV, config.DATA_ROOT, "test", get_eval_transforms())
@@ -50,4 +50,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    eval_main()
