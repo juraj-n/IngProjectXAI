@@ -6,12 +6,12 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from src.cnn import config
-from src.cnn.dataset import CNMCDataset
-from src.cnn.evaluate import evaluate_model
-from src.cnn.metrics import compute_metrics
-from src.cnn.model import build_model
-from src.cnn.transforms import get_eval_transforms, get_train_transforms
+from src import config
+from data.dataset import CNMCDataset
+from training.evaluate import evaluate_model
+from metrics.metrics import compute_metrics
+from models.resnet import build_model
+from data.transforms import get_eval_transforms, get_train_transforms
 
 
 def set_seed(seed):
@@ -82,7 +82,7 @@ def main():
             "val_accuracy": val_metrics["accuracy"],
             "val_f1": val_metrics["f1_macro"],
         })
-        pd.DataFrame(history).to_csv(config.OUTPUT_DIR / "history.csv", index=False)
+        pd.DataFrame(history).to_csv(config.OUTPUT_DIR / "history.csv", sep=";", index=False)
 
         # ----- save best checkpoint -----
         if val_metrics["f1_macro"] > best_f1:
@@ -91,7 +91,7 @@ def main():
             print("  -> new best model saved")
 
     print(f"\nDone. Best validation F1: {best_f1:.4f}")
-    print("Now run: python -m src.evaluate")
+    print("Now run: python -m src.training.evaluate")
 
 
 if __name__ == "__main__":

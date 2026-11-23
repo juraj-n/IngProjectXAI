@@ -8,7 +8,7 @@ build/
 dist/
 
 # Output
-outputs/
+/outputs/
 
 # Dataset
-data/
+/data/

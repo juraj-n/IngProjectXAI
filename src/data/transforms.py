@@ -1,6 +1,6 @@
 from torchvision import transforms
 
-from src.cnn import config
+from src import config
 
 # Values the pretrained ResNet expects
 MEAN = [0.485, 0.456, 0.406]

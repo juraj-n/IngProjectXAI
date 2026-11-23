@@ -4,11 +4,11 @@ import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader
 
-from src.cnn import config
-from src.cnn.dataset import CNMCDataset
-from src.cnn.metrics import compute_metrics
-from src.cnn.model import build_model
-from src.cnn.transforms import get_eval_transforms
+from src import config
+from data.dataset import CNMCDataset
+from metrics.metrics import compute_metrics
+from models.resnet import build_model
+from data.transforms import get_eval_transforms
 
 
 @torch.no_grad()
